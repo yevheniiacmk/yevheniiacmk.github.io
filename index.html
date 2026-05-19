@@ -9,14 +9,21 @@
   <meta property="og:description" content="Independent QA consultant with 10+ years of experience. QA audits, test strategy, AI-driven automation, SAFe integration, and QA leadership." />
   <meta property="og:url" content="https://YOUR_USERNAME.github.io/qa-mvp/" />
   <title>Yevheniia Chumak — Senior QA & Strategic QA Lead</title>
+  <link rel="icon" href="img/mvplogo.svg" type="image/svg+xml" />
+  <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32" />
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
 
 <div class="page-bg" id="page-bg" aria-hidden="true"></div>
 
 <nav>
-  <div class="nav-logo">Yevheniia<span>.</span>QA</div>
+  <a href="#hero" class="nav-logo">
+    <img class="nav-logo-icon" src="img/mvplogo.png" alt="" width="58" height="58" />
+    <span class="nav-logo-text">Yevheniia<span>.</span>QA</span>
+  </a>
   <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
       <path d="M4 6h16M4 12h16M4 18h16"/>
@@ -239,6 +246,19 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
             <span data-i18n="about.linkedin">LinkedIn Profile</span>
           </a>
+          <div class="buff-panel">
+            <p class="buff-title" data-i18n="about.buffTitle">Activate buff</p>
+            <div class="buff-buttons">
+              <button type="button" class="linkedin-link buff-btn" data-buff="businesslike" aria-pressed="false">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <span data-i18n="about.buffBusinesslike">Businesslike</span>
+              </button>
+              <button type="button" class="linkedin-link buff-btn" data-buff="stress" aria-pressed="false">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                <span data-i18n="about.buffStress">Stress Resistant</span>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="about-text">
           <div class="section-tag" data-i18n="about.tag">About me</div>
@@ -291,6 +311,13 @@
 </div>
 
 </main>
+
+<div class="buff-overlay buff-overlay--left" id="buff-businesslike" hidden aria-hidden="true">
+  <img src="img/oktopus.png" alt="" data-i18n-title="about.buffBusinesslike" title="Businesslike" />
+</div>
+<div class="buff-overlay buff-overlay--right" id="buff-stress" hidden aria-hidden="true">
+  <img src="img/fire.webp" alt="" data-i18n-title="about.buffStress" title="Stress Resistant" />
+</div>
 
 <footer>
   <span data-i18n="footer.text">© 2026 Yevheniia · Senior QA & Strategic QA Lead ·</span>

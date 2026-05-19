@@ -10,6 +10,8 @@
   --border: #e5e4e0;
   --radius: 12px;
   --content-max: 960px;
+  --buff-active: #c89cdd;
+  --buff-active-light: #f4ecf8;
 }
 
 html { scroll-behavior: smooth; }
@@ -65,13 +67,39 @@ nav {
 }
 
 .nav-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-weight: 700;
   font-size: 1rem;
   letter-spacing: -0.3px;
   flex-shrink: 0;
+  text-decoration: none;
+  color: var(--text);
 }
 
-.nav-logo span { color: var(--accent); }
+.nav-logo:hover,
+.nav-logo:focus-visible {
+  color: var(--text);
+  outline: none;
+}
+
+.nav-logo:focus-visible .nav-logo-icon {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.nav-logo-icon {
+  width: 58px;
+  height: 58px;
+  display: block;
+  flex-shrink: 0;
+}
+
+.nav-logo-text span {
+  color: var(--accent);
+}
 
 .nav-right {
   display: flex;
@@ -471,6 +499,12 @@ section {
   margin-bottom: 1.25rem;
 }
 
+button.badge,
+button.linkedin-link {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
 .about-pills {
   display: flex;
   flex-wrap: wrap;
@@ -607,6 +641,165 @@ section {
 .linkedin-link:focus-visible {
   background: var(--accent-light);
   outline: none;
+}
+
+.buff-panel {
+  margin-top: 1.25rem;
+  max-width: 200px;
+}
+
+.buff-title {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+}
+
+.buff-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.buff-buttons .linkedin-link.buff-btn {
+  width: 100%;
+  margin-top: 0;
+  cursor: pointer;
+  font-family: inherit;
+  background: transparent;
+}
+
+.buff-buttons .linkedin-link.buff-btn i {
+  width: 1em;
+  text-align: center;
+}
+
+.buff-buttons .linkedin-link.buff-btn.is-active {
+  color: var(--buff-active);
+  border-color: var(--buff-active);
+  background: var(--buff-active-light);
+}
+
+.buff-buttons .linkedin-link.buff-btn.is-active:hover,
+.buff-buttons .linkedin-link.buff-btn.is-active:focus-visible {
+  background: #ede0f4;
+}
+
+.buff-overlay {
+  position: fixed;
+  z-index: 200;
+  bottom: 1rem;
+  max-width: min(220px, 38vw);
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.buff-overlay--left {
+  left: 1rem;
+  bottom: 0px;
+}
+
+.buff-overlay--right {
+  right: 1rem;
+}
+
+.buff-overlay img {
+  width: 100%;
+  height: auto;
+  display: block;
+  pointer-events: auto;
+  filter: drop-shadow(0 8px 24px rgba(0, 0, 0, 0.2));
+}
+
+.buff-overlay[hidden] {
+  display: block;
+}
+
+.buff-overlay.is-visible {
+  visibility: visible;
+  opacity: 1;
+  animation: buff-enter 0.45s cubic-bezier(0.34, 1.25, 0.64, 1) forwards;
+}
+
+.buff-overlay--left.is-visible {
+  animation-name: buff-enter-left;
+}
+
+.buff-overlay--right.is-visible {
+  animation-name: buff-enter-right;
+}
+
+.buff-overlay.is-hiding {
+  visibility: visible;
+  animation: buff-exit 0.32s ease-in forwards;
+}
+
+.buff-overlay--left.is-hiding {
+  animation-name: buff-exit-left;
+}
+
+.buff-overlay--right.is-hiding {
+  animation-name: buff-exit-right;
+}
+
+@keyframes buff-enter-left {
+  from {
+    opacity: 0;
+    transform: translate(-18px, 24px) scale(0.82) rotate(-4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes buff-enter-right {
+  from {
+    opacity: 0;
+    transform: translate(18px, 24px) scale(0.82) rotate(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+}
+
+@keyframes buff-exit-left {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(-12px, 16px) scale(0.88) rotate(-2deg);
+  }
+}
+
+@keyframes buff-exit-right {
+  from {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0deg);
+  }
+  to {
+    opacity: 0;
+    transform: translate(12px, 16px) scale(0.88) rotate(2deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .buff-overlay.is-visible,
+  .buff-overlay.is-hiding {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .buff-overlay:not(.is-visible) {
+    opacity: 0;
+  }
 }
 
 footer {
@@ -783,9 +976,18 @@ html[lang="uk"] body {
 
 html[lang="ru"] .hero-title,
 html[lang="uk"] .hero-title {
-  font-size: clamp(2.15rem, 5.4vw, 3.65rem);
-  line-height: 1.12;
-  letter-spacing: -1.2px;
+  font-size: clamp(1.65rem, 3.6vw, 2.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.5px;
+  max-width: 640px;
+}
+
+@media (max-width: 768px) {
+  html[lang="ru"] .hero-title,
+  html[lang="uk"] .hero-title {
+    font-size: clamp(1.5rem, 6.5vw, 2rem);
+    line-height: 1.1;
+  }
 }
 
 html[lang="ru"] .hero-sub,

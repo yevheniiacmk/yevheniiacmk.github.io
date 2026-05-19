@@ -15,8 +15,11 @@ Static portfolio site for an independent QA consultant. Hosted on GitHub Pages w
 │   ├── ru.json
 │   └── uk.json
 ├── img/
-│   ├── backgrnd.png      # Site background (translucent overlay in CSS)
-│   └── linkedphoto.jpeg  # Profile photo
+│   ├── mvplogo.svg           # Logo (nav + SVG favicon)
+│   ├── favicon-32.png        # PNG favicon (32×32)
+│   ├── apple-touch-icon.png  # iOS home screen (180×180)
+│   ├── backgrnd.png          # Site background (translucent overlay in CSS)
+│   └── linkedphoto.jpeg      # Profile photo
 └── .nojekyll           # Disables Jekyll processing on GitHub Pages
 ```
 

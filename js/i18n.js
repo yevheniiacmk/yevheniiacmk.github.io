@@ -51,6 +51,11 @@
       if (strings[key] != null) el.placeholder = strings[key];
     });
 
+    document.querySelectorAll('[data-i18n-title]').forEach((el) => {
+      const key = el.getAttribute('data-i18n-title');
+      if (strings[key] != null) el.title = strings[key];
+    });
+
     if (strings['meta.title']) {
       document.title = strings['meta.title'];
     }

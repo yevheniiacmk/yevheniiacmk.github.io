@@ -36,11 +36,65 @@
     window.__formspreeSent = false;
   }
 
+  function showBuffOverlay(overlay) {
+    overlay.hidden = false;
+    overlay.classList.remove('is-hiding');
+    overlay.classList.add('is-visible');
+    overlay.setAttribute('aria-hidden', 'false');
+  }
+
+  function hideBuffOverlay(overlay) {
+    if (!overlay.classList.contains('is-visible')) return;
+
+    overlay.classList.remove('is-visible');
+    overlay.classList.add('is-hiding');
+    overlay.setAttribute('aria-hidden', 'true');
+
+    const finishHide = () => {
+      overlay.hidden = true;
+      overlay.classList.remove('is-hiding');
+      overlay.removeEventListener('animationend', finishHide);
+    };
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      finishHide();
+    } else {
+      overlay.addEventListener('animationend', finishHide);
+    }
+  }
+
+  function initBuffs() {
+    const overlays = {
+      businesslike: document.getElementById('buff-businesslike'),
+      stress: document.getElementById('buff-stress'),
+    };
+
+    document.querySelectorAll('.buff-btn[data-buff]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const key = btn.dataset.buff;
+        const overlay = overlays[key];
+        const active = !btn.classList.contains('is-active');
+
+        btn.classList.toggle('is-active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+
+        if (!overlay) return;
+
+        if (active) {
+          showBuffOverlay(overlay);
+        } else {
+          hideBuffOverlay(overlay);
+        }
+      });
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     window.__formspreeSent =
       new URLSearchParams(window.location.search).get('sent') === '1';
     initMobileNav();
     initContactForm();
+    initBuffs();
   });
 
   document.addEventListener('localeapplied', showFormspreeSuccess);
