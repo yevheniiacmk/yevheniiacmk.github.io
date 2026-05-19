@@ -18,26 +18,30 @@
   }
 
   function initContactForm() {
+    const nextInput = document.getElementById('formspree-next');
+    if (nextInput) {
+      nextInput.value = `${window.location.origin}${window.location.pathname}?sent=1#contact`;
+    }
+  }
+
+  function showFormspreeSuccess() {
+    if (!window.__formspreeSent) return;
+
     const form = document.querySelector('.contact-form');
-    if (!form) return;
+    const success = document.getElementById('contact-success');
+    if (success) success.hidden = false;
+    if (form) form.hidden = true;
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const email = form.querySelector('input[type="email"]')?.value?.trim();
-      const name = form.querySelector('input[type="text"]')?.value?.trim();
-      const company = form.querySelectorAll('input[type="text"]')[1]?.value?.trim();
-      const message = form.querySelector('textarea')?.value?.trim();
-
-      const subject = encodeURIComponent('QA consultation inquiry');
-      const body = encodeURIComponent(
-        `Name: ${name || '—'}\nEmail: ${email || '—'}\nCompany: ${company || '—'}\n\n${message || ''}`
-      );
-      window.location.href = `mailto:?subject=${subject}&body=${body}`;
-    });
+    history.replaceState(null, '', `${window.location.pathname}#contact`);
+    window.__formspreeSent = false;
   }
 
   document.addEventListener('DOMContentLoaded', () => {
+    window.__formspreeSent =
+      new URLSearchParams(window.location.search).get('sent') === '1';
     initMobileNav();
     initContactForm();
   });
+
+  document.addEventListener('localeapplied', showFormspreeSuccess);
 })();

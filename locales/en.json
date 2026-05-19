@@ -99,6 +99,7 @@
     "companyPlaceholder": "Company / project (optional)",
     "messagePlaceholder": "What's the challenge you're facing?",
     "submit": "Send message →",
+    "success": "Thank you! Your message was sent. I'll get back to you within 24 hours.",
     "privacy": "By submitting, you agree that your details will be used only to respond to your inquiry."
   },
   "footer": {

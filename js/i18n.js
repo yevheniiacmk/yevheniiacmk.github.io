@@ -93,6 +93,7 @@
     }
     applyStrings(stringsCache[lang]);
     updateSwitcher(lang);
+    document.dispatchEvent(new CustomEvent('localeapplied', { detail: { lang } }));
   }
 
   function initSwitcher() {

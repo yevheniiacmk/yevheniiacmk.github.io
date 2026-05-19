@@ -273,13 +273,17 @@
       <div class="section-tag" data-i18n="contact.tag">Get in touch</div>
       <div class="section-title" data-i18n="contact.title">Let's solve your quality problem.</div>
       <p class="section-sub" data-i18n="contact.sub">Tell me what you're working on.</p>
-      <form class="contact-form" action="#" method="post">
+      <p class="contact-success" id="contact-success" data-i18n="contact.success" role="status" hidden></p>
+      <form class="contact-form" action="https://formspree.io/f/xredegzw" method="POST">
+        <input type="hidden" name="_subject" value="QA consultation inquiry" />
+        <input type="hidden" name="_next" id="formspree-next" value="" />
+        <input type="text" name="_gotcha" class="form-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true" />
         <div class="form-row">
-          <input type="text" name="name" autocomplete="name" data-i18n-placeholder="contact.namePlaceholder" placeholder="Your name" />
-          <input type="email" name="email" autocomplete="email" data-i18n-placeholder="contact.emailPlaceholder" placeholder="Email address" />
+          <input type="text" name="name" autocomplete="name" required data-i18n-placeholder="contact.namePlaceholder" placeholder="Your name" />
+          <input type="email" name="email" autocomplete="email" required data-i18n-placeholder="contact.emailPlaceholder" placeholder="Email address" />
         </div>
-        <input type="text" name="company" data-i18n-placeholder="contact.companyPlaceholder" placeholder="Company / project (optional)" />
-        <textarea name="message" data-i18n-placeholder="contact.messagePlaceholder" placeholder="What's the challenge you're facing?"></textarea>
+        <input type="text" name="company" autocomplete="organization" data-i18n-placeholder="contact.companyPlaceholder" placeholder="Company / project (optional)" />
+        <textarea name="message" required data-i18n-placeholder="contact.messagePlaceholder" placeholder="What's the challenge you're facing?"></textarea>
         <button type="submit" data-i18n="contact.submit">Send message →</button>
       </form>
       <p class="contact-privacy" data-i18n="contact.privacy">By submitting, you agree that your details will be used only to respond to your inquiry.</p>
