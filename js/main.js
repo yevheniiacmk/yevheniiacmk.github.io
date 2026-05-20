@@ -86,31 +86,52 @@
   }
 
   function initBuffs() {
+    const mobileMq = window.matchMedia('(max-width: 768px)');
     const overlays = {
       businesslike: document.getElementById('buff-businesslike'),
       communication: document.getElementById('buff-communication'),
       tech: document.getElementById('buff-tech'),
       stress: document.getElementById('buff-stress'),
     };
+    const buffButtons = document.querySelectorAll('.buff-btn[data-buff]');
 
-    document.querySelectorAll('.buff-btn[data-buff]').forEach((btn) => {
+    function setBuffActive(btn, active) {
+      const overlay = overlays[btn.dataset.buff];
+      btn.classList.toggle('is-active', active);
+      btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+      if (!overlay) return;
+      if (active) {
+        showBuffOverlay(overlay);
+      } else {
+        hideBuffOverlay(overlay);
+      }
+    }
+
+    function deactivateOtherBuffs(keepBtn) {
+      buffButtons.forEach((other) => {
+        if (other === keepBtn || !other.classList.contains('is-active')) return;
+        setBuffActive(other, false);
+      });
+    }
+
+    function enforceSingleBuffOnMobile() {
+      if (!mobileMq.matches) return;
+      const active = [...buffButtons].filter((btn) => btn.classList.contains('is-active'));
+      active.slice(1).forEach((btn) => setBuffActive(btn, false));
+    }
+
+    buffButtons.forEach((btn) => {
       btn.addEventListener('click', () => {
-        const key = btn.dataset.buff;
-        const overlay = overlays[key];
         const active = !btn.classList.contains('is-active');
-
-        btn.classList.toggle('is-active', active);
-        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
-
-        if (!overlay) return;
-
-        if (active) {
-          showBuffOverlay(overlay);
-        } else {
-          hideBuffOverlay(overlay);
+        if (active && mobileMq.matches) {
+          deactivateOtherBuffs(btn);
         }
+        setBuffActive(btn, active);
       });
     });
+
+    mobileMq.addEventListener('change', enforceSingleBuffOnMobile);
+    enforceSingleBuffOnMobile();
   }
 
   document.addEventListener('DOMContentLoaded', () => {

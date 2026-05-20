@@ -506,21 +506,13 @@ html[lang="en"] .hero-tag {
   font-size: 0.95rem;
 }
 
-.badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--accent-light);
-  border: 1px solid #b2ddd8;
-  border-radius: 8px;
-  padding: 8px 14px;
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--accent);
-  margin-bottom: 1.25rem;
+.about-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 1.25rem;
+  width: 100%;
 }
 
-button.badge,
 button.linkedin-link {
   appearance: none;
   -webkit-appearance: none;
@@ -1197,11 +1189,6 @@ html[lang="uk"] .section-tag {
 
 html[lang="ru"] .hero-credential,
 html[lang="uk"] .hero-credential,
-html[lang="ru"] .badge,
-html[lang="uk"] .badge {
-  font-size: 0.76rem;
-}
-
 html[lang="ru"] .pill,
 html[lang="uk"] .pill {
   font-size: 0.75rem;
