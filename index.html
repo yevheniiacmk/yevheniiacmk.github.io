@@ -5,10 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Senior QA Engineer and Strategic QA Lead with 10+ years of experience. QA audits, test strategy, AI-driven automation, SAFe integration, and QA leadership." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Yevheniia Chumak — Senior QA & Strategic QA Lead" />
+  <meta property="og:title" content="Yevheniia Chumak - Senior QA & Strategic QA Lead" />
   <meta property="og:description" content="Senior QA Engineer and Strategic QA Lead with 10+ years of experience. QA audits, test strategy, AI-driven automation, SAFe integration, and QA leadership." />
   <meta property="og:url" content="https://yevheniiacmk.github.io/" />
-  <title>Yevheniia Chumak — Senior QA & Strategic QA Lead</title>
+  <title>Yevheniia Chumak - Senior QA & Strategic QA Lead</title>
   <link rel="icon" href="img/mvplogo.svg" type="image/svg+xml" />
   <link rel="icon" href="img/favicon-32.png" type="image/png" sizes="32x32" />
   <link rel="apple-touch-icon" href="img/apple-touch-icon.png" sizes="180x180" />
@@ -34,7 +34,7 @@
       <li><a href="#services" data-i18n="nav.services">Services</a></li>
       <li><a href="#cases" data-i18n="nav.cases">Case Studies</a></li>
       <li><a href="#certs" data-i18n="nav.certs">Certifications</a></li>
-      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#about" class="nav-link-about" data-i18n="nav.about">About</a></li>
       <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
     </ul>
     <div class="lang-switch" role="group" aria-label="Language">
@@ -52,7 +52,7 @@
 <div class="page-wrap">
   <section id="hero">
     <div class="hero-tag" data-i18n="hero.tag">Senior QA | Strategic QA Lead | AI-Driven Quality Operations</div>
-    <h1 class="hero-title" data-i18n-html="hero.title">Quality that <em>scales</em> — strategy, automation & leadership.</h1>
+    <h1 class="hero-title" data-i18n-html="hero.title">Quality that <em>scales</em> - strategy, automation & leadership.</h1>
     <p class="hero-sub" data-i18n="hero.sub">Senior QA Engineer and Strategic QA Lead with 10+ years of experience. I build quality cultures, eliminate manual bottlenecks, and help teams ship with confidence - using modern, AI-driven approaches.</p>
     <div class="hero-credential"><span aria-hidden="true">✦</span> <span data-i18n="hero.credential">Certified AI-Empowered SAFe® PO/PM</span></div>
     <div class="btns">
@@ -60,6 +60,7 @@
       <a href="#cases" class="btn btn-ghost" data-i18n="hero.ctaSecondary">See my work</a>
     </div>
     <div class="hero-stats">
+      <div class="section-tag" data-i18n="hero.statsTag">Track records</div>
       <div>
         <div class="stat-num">10</div>
         <div class="stat-label" data-i18n="hero.statYears">Years of QA experience</div>
@@ -291,6 +292,14 @@
                 <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                 <span data-i18n="about.buffBusinesslike">Businesslike</span>
               </button>
+              <button type="button" class="linkedin-link buff-btn" data-buff="communication" aria-pressed="false">
+                <i class="fa-solid fa-comments" aria-hidden="true"></i>
+                <span data-i18n="about.buffCommunication">Communication</span>
+              </button>
+              <button type="button" class="linkedin-link buff-btn" data-buff="tech" aria-pressed="false">
+                <i class="fa-solid fa-chart-line" aria-hidden="true"></i>
+                <span data-i18n="about.buffTech">Tech &amp; Analytics</span>
+              </button>
               <button type="button" class="linkedin-link buff-btn" data-buff="stress" aria-pressed="false">
                 <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
                 <span data-i18n="about.buffStress">Stress Resistant</span>
@@ -300,7 +309,7 @@
         </div>
         <div class="about-text">
           <div class="section-tag" data-i18n="about.tag">About me</div>
-          <h2 data-i18n="about.title">Quality isn't a phase — it's a mindset.</h2>
+          <h2 data-i18n="about.title">Quality isn't a phase - it's a mindset.</h2>
           <div class="badge" data-i18n="about.badge">✦ Certified AI-Empowered SAFe® PO/PM</div>
           <p data-i18n="about.p1">I'm Yevheniia, a Senior QA Engineer and Strategic QA Lead.</p>
           <p data-i18n="about.p2">I'm passionate about building quality culture.</p>
@@ -350,12 +359,22 @@
 
 </main>
 
-<div class="buff-overlay buff-overlay--left" id="buff-businesslike" hidden aria-hidden="true">
+<div class="buff-overlay buff-overlay--left buff-overlay--left-1" id="buff-businesslike" hidden aria-hidden="true">
   <img src="img/oktopus.png" alt="" data-i18n-title="about.buffBusinesslike" title="Businesslike" />
+</div>
+<div class="buff-overlay buff-overlay--left buff-overlay--left-2" id="buff-communication" hidden aria-hidden="true">
+  <img src="img/communicate.png" alt="" data-i18n-title="about.buffCommunication" title="Communication" />
+</div>
+<div class="buff-overlay buff-overlay--left buff-overlay--left-3" id="buff-tech" hidden aria-hidden="true">
+  <img src="img/techlitics.png" alt="" data-i18n-title="about.buffTech" title="Tech &amp; Analytics" />
 </div>
 <div class="buff-overlay buff-overlay--right" id="buff-stress" hidden aria-hidden="true">
   <img src="img/fire.webp" alt="" data-i18n-title="about.buffStress" title="Stress Resistant" />
 </div>
+
+<button type="button" class="back-to-top" id="back-to-top" aria-label="Back to top" aria-hidden="true" tabindex="-1" data-i18n-aria-label="a11y.backToTop">
+  <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+</button>
 
 <footer>
   <span data-i18n="footer.text">© 2026 Yevheniia · Senior QA & Strategic QA Lead ·</span>

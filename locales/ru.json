@@ -18,6 +18,7 @@
     "credential": "Certified AI-Empowered SAFe® PO/PM",
     "ctaPrimary": "Обсудить проект",
     "ctaSecondary": "Смотреть кейсы",
+    "statsTag": "Опыт в цифрах",
     "statYears": "Лет опыта",
     "statProjects": "Реализованных проектов",
     "statClients": "Довольных клиентов",
@@ -79,6 +80,8 @@
     "linkedin": "Профиль LinkedIn",
     "buffTitle": "Активировать бафф",
     "buffBusinesslike": "Businesslike",
+    "buffCommunication": "Communication",
+    "buffTech": "Tech & Analytics",
     "buffStress": "Stress Resistant",
     "pillSafe": "SAFe 6",
     "pillAgile": "Agile Testing",
@@ -107,5 +110,8 @@
   },
   "footer": {
     "text": "© 2026 Евгения · Senior QA & Strategic QA Lead ·"
+  },
+  "a11y": {
+    "backToTop": "Наверх"
   }
 }

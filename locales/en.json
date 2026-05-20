@@ -18,6 +18,7 @@
     "credential": "Certified AI-Empowered SAFe® PO/PM",
     "ctaPrimary": "Let's talk",
     "ctaSecondary": "See my work",
+    "statsTag": "Track records",
     "statYears": "Years of QA experience",
     "statProjects": "Years of QA Leadership",
     "statClients": "Atlassian Migrated projects",
@@ -82,6 +83,8 @@
     "linkedin": "LinkedIn Profile",
     "buffTitle": "Activate buff",
     "buffBusinesslike": "Businesslike",
+    "buffCommunication": "Communication",
+    "buffTech": "Tech & Analytics",
     "buffStress": "Stress Resistant",
     "pillSafe": "SAFe 6",
     "pillAgile": "Agile Testing",
@@ -110,5 +113,8 @@
   },
   "footer": {
     "text": "© 2026 Yevheniia · Senior QA & Strategic QA Lead ·"
+  },
+  "a11y": {
+    "backToTop": "Back to top"
   }
 }

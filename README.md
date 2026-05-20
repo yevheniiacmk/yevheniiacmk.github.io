@@ -1,4 +1,4 @@
-# Yevheniia Chumak — QA Consultant Site
+# Yevheniia — QA Consultant Site
 
 Static portfolio site for an independent QA consultant. Hosted on GitHub Pages with no build steps.
 
@@ -31,11 +31,6 @@ Static portfolio site for an independent QA consultant. Hosted on GitHub Pages w
 ## Contact form
 
 Submissions go to [Formspree](https://formspree.io). After a successful send, visitors return to `#contact` with a translated success message.
-
-## Certifications
-
-- **Ready for SAFe®** — Credly verify link is live in `index.html`.
-- **Certified SAFe® 5 Practitioner (SP)** — verify link is a placeholder (`data-credly-placeholder="true"`). Replace `href="#"` on that card with your Credly public URL and remove the placeholder class when ready.
 
 ## Editing translations
 
