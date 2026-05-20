@@ -1,6 +1,6 @@
 {
   "meta": {
-    "title": "Yevheniia Chumak — Senior QA & Strategic QA Lead",
+    "title": "Yevheniia Chumak - Senior QA & Strategic QA Lead",
     "description": "Independent QA consultant with 10+ years of experience. QA audits, test strategy, AI-driven automation, SAFe integration, and QA leadership for startups and enterprise teams."
   },
   "nav": {
@@ -12,33 +12,33 @@
     "langLabel": "Language"
   },
   "hero": {
-    "tag": "Independent QA Consultant",
-    "title": "Quality that <em>scales</em> — strategy, automation & leadership.",
-    "sub": "Senior QA Engineer and Strategic QA Lead with 10+ years of experience. I build quality cultures, eliminate manual bottlenecks, and help teams ship with confidence — using modern, AI-driven approaches.",
+    "tag": "Senior QA | Strategic QA Lead | AI-Driven Quality Operations",
+    "title": "Quality that <em>scales</em> - strategy, automation & leadership.",
+    "sub": "Senior QA Engineer and Strategic QA Lead with 10+ years of experience. I build quality cultures, eliminate manual bottlenecks, and help teams ship with confidence - using modern, AI-driven approaches.",
     "credential": "Certified AI-Empowered SAFe® PO/PM",
     "ctaPrimary": "Let's talk",
     "ctaSecondary": "See my work",
-    "statYears": "Years of experience",
-    "statProjects": "Projects delivered",
-    "statClients": "Happy clients",
+    "statYears": "Years of QA experience",
+    "statProjects": "QA Leadership",
+    "statClients": "Atlassian Migrated projects",
     "statCert": "SAFe certified"
   },
   "services": {
     "tag": "What I do",
     "title": "Services",
-    "sub": "From QA audits to AI-assisted automation — I tailor every engagement to your team's real needs and business goals.",
+    "sub": "From QA building processes to AI-assisted QA manual daily routine automation - I tailor every QA process to QA team's real needs and business goals.",
     "auditTitle": "QA Audit & Assessment",
-    "auditDesc": "A thorough review of your testing practices, coverage gaps, and toolchain — with a prioritized action plan tied to business risk.",
+    "auditDesc": "A thorough review of your testing practices, coverage gaps, and toolchain - with a prioritized action plan tied to business risk.",
     "strategyTitle": "Test Strategy & Planning",
     "strategyDesc": "Building a sustainable, risk-based testing strategy aligned with your product goals, team capacity, and Agile delivery cycle.",
-    "automationTitle": "AI-Driven QA Automation",
-    "automationDesc": "Modernising your automation stack with AI-assisted tools and techniques — reducing maintenance overhead and accelerating feedback loops.",
+    "automationTitle": "AI-Driven QA Manual Daily Routine Processes Automation",
+    "automationDesc": "Modernising your daily routine manual stack with AI-assisted tools and techniques - reducing maintenance overhead and accelerating feedback loops.",
     "agileTitle": "Agile & SAFe QA Integration",
-    "agileDesc": "Embedding quality practices into Agile and SAFe workflows — from sprint ceremonies to PI Planning and continuous testing pipelines.",
-    "processTitle": "Process Automation",
-    "processDesc": "Automating daily QA routine tasks — reporting, triage, test data generation — so your team spends time on what actually matters.",
+    "agileDesc": "Embedding quality practices into Agile and SAFe workflows - from sprint ceremonies to PI Planning and continuous testing pipelines.",
+    "processTitle": "QA Reports Automation",
+    "processDesc": "Building automated tools for QA Reports - Testing results reporting, feature risks triage, QA income testing data generation, important QA metrics - so the QA team spends time on what actually matters.",
     "leadershipTitle": "QA Leadership & Mentoring",
-    "leadershipDesc": "Building quality culture from the top down — coaching QA leads, mentoring engineers, and helping teams own quality as a shared value."
+    "leadershipDesc": "Building quality culture - people management, mentoring QA engineers, and helping QA teams own quality as a shared value."
   },
   "cases": {
     "tag": "Case Studies",
@@ -54,27 +54,30 @@
     "case1Outcome": "Release failures dropped 70% in 3 months. The team gained confidence to ship weekly instead of monthly.",
     "case2Tag": "E-commerce",
     "case2Title": "Cutting QA Cycle Time from 2 Weeks to 3 Days",
-    "case2Problem": "Manual testing was a release bottleneck for a growing platform — blocking deployments for up to 2 weeks.",
+    "case2Problem": "Manual testing was a release bottleneck for a growing platform - blocking deployments for up to 2 weeks.",
     "case2Approach": "Mapped all manual cases, identified automation candidates, and delivered a Playwright-based framework with team training.",
     "case2Outcome": "QA cycle dropped to 3 days. Engineers owned test maintenance, reducing reliance on a single QA bottleneck.",
     "case3Tag": "SaaS / Agile Transformation",
     "case3Title": "Embedding Quality into a SAFe Programme",
-    "case3Problem": "A scale-up transitioning to SAFe had no consistent QA integration across ARTs — quality was an afterthought at PI boundaries.",
+    "case3Problem": "A scale-up transitioning to SAFe had no consistent QA integration across ARTs - quality was an afterthought at PI boundaries.",
     "case3Approach": "Defined QA roles within SAFe ceremonies, introduced built-in quality practices, and automated routine reporting across teams.",
     "case3Outcome": "Quality metrics became a standard PI objective. Defect escape rate dropped significantly within two programme increments."
   },
   "certs": {
     "tag": "Credentials",
     "title": "Certifications",
-    "sub": "Verified credentials from SAFe and IBM — click any badge to verify on Credly.",
-    "verify": "✦ Verify on Credly →"
+    "sub": "Verified credentials from SAFe and IBM - click any badge to verify on Credly.",
+    "verify": "✦ Verify on Credly →",
+    "cert1Name": "Certified AI-Empowered SAFe® Product Owner / Product Manager",
+    "cert2Name": "Ready for SAFe®",
+    "cert3Name": "Certified SAFe® 5 Practitioner (SP)"
   },
   "about": {
     "tag": "About me",
-    "title": "Quality isn't a phase — it's a mindset.",
+    "title": "Quality isn't a phase - it's a mindset.",
     "badge": "✦ Certified AI-Empowered SAFe® PO/PM",
     "p1": "I'm Yevheniia, a Senior QA Engineer and Strategic QA Lead with 10+ years of experience working across startups, scale-ups, and enterprise teams.",
-    "p2": "I'm passionate about building quality culture — not just finding bugs. My focus is on automating the daily QA routine, enabling teams to move faster without sacrificing confidence, and leading engineers to take genuine ownership of quality.",
+    "p2": "I'm passionate about building quality culture - not just finding bugs. My focus is on automating the daily QA routine, enabling teams to move faster without sacrificing confidence, and leading engineers to take genuine ownership of quality.",
     "p3": "With a background spanning Agile Testing, AI-driven quality operations, and SAFe at scale, I bring both hands-on technical depth and strategic leadership to every engagement.",
     "linkedin": "LinkedIn Profile",
     "buffTitle": "Activate buff",
